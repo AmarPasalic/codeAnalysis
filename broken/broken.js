@@ -4,8 +4,8 @@ var tasks = [];    // var is outdated
 function addItem() {
     let input = document.getElementById("itemInput") ///should use const 
     let item = input.value    ///should use const 
-    if (item != "") items.push({name: item, bought: false}); 
-    input.value = "" 
+    if (item != "") items.push({ name: item, bought: false });
+    input.value = ""
     renderItems()
 }
 
@@ -15,7 +15,7 @@ function renderItems() {   // should include if statemaent to check if object ex
         let itemElement = document.createElement("div") // should be const 
         itemElement.className = "item"
 
-        if(items[i].bought == true) {  // best practice is to use ===
+        if (items[i].bought == true) {  // best practice is to use ===
             itemElement.classList.add("bought")
         }
 
@@ -38,7 +38,7 @@ function deleteItem(index) {
 function addTask() {
     let input = document.getElementById("taskInput")
     let task = input.value
-    if (task != "") tasks.push({name: task, completed: false});
+    if (task != "") tasks.push({ name: task, completed: false });
     input.value = ""
     renderTasks()
 }
@@ -49,7 +49,7 @@ function renderTasks() {   // should include if statemaent to check if object ex
         let taskElement = document.createElement("div")
         taskElement.className = "task"
 
-        if(tasks[i].completed == true) { // best practice is to use ===
+        if (tasks[i].completed == true) { // best practice is to use ===
             taskElement.classList.add("completed")
         }
 
@@ -69,7 +69,16 @@ function deleteTask(index) {
     renderTasks()
 }
 
-window.onload = function() {    /// on load doesnt make sense because code doesnt use local storage and doestn fetach data from server
+window.onload = function () {    /// on load doesnt make sense because code doesnt use local storage and doestn fetach data from server
     renderItems()
     renderTasks()
 }
+
+
+
+
+
+
+
+
+
