@@ -47,7 +47,7 @@ function renderTasks() {
     taskList.innerHTML = ""
     tasks.forEach((element, i) => {
         if (!element) return;
-        let taskElement = document.createElement("div")
+        const taskElement = document.createElement("div")
         taskElement.className = "task"
         { element.completed && taskElement.classList.add("completed") }
 
